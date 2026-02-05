@@ -1,164 +1,237 @@
-<!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
-    <title>Web PSAJ - Kelompok 3</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="img/logos.png" />
-  </head>
-  <body>
+/* =========================================
+   1. RESET & DASAR (GENERAL STYLES)
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Memastikan padding tidak menambah lebar elemen */
+    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins sesuai HTML */
+}
 
-    <!-- Bagian Navigasi -->
-<header>
-  <nav>
-    <div class="logo">kelompok<span>Tiga</span></div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#kelompok">Kelompok</a></li>
-      <li><a href="#laporan">Laporan</a></li>
-      <li><a href="#video">Video</a></li>
-    </ul>
-  </nav>
-</header>
+html {
+    scroll-behavior: smooth; /* Efek scroll halus saat klik menu navigasi */
+}
 
-<!-- Bagian Hero -->
-<section id="home" class="hero-kelompok">
-  <div class="hero-overlay">
-    <p>Welcome to Our Website</p>
-    <h1>Kelompok 3</h1>
-    <p>Selamat datang di website kelompok kami</p>
-    <br />
-    <div class="hero-buttons">
-      <a href="#kelompok" class="btn-cek">Cek Anggota</a>
-    </div>
-  </div>
-</section>
+body {
+    background-color: #fdfaf5; /* Warna Cream sangat muda untuk latar belakang */
+    color: #5d4037; /* Warna Coklat Tua untuk teks agar mudah dibaca */
+    line-height: 1.6;
+}
 
-<!-- Bagian Anggota -->
-<section id="kelompok" class="section-container bg-light">
-  <div class="container">
-    <h2 class="section-title">Anggota Kelompok</h2>
-    <div class="kelompok-grid">
-      
-      <a href="adit.jpeg" class="kelompok-card">
-        <div class="card-img">
-          <img src="adit.jpeg" alt="Anggota 1" />
-        </div>
-        <div class="card-info">
-          <h3>Adhitya Awaludin Setiawan</h3>
-          <p>Absen: 01</p>
-        </div>
-      </a>
+/* Pengaturan kontainer utama agar konten tidak terlalu lebar di laptop */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
 
-      <a href="fino.jpeg" class="kelompok-card">
-        <div class="card-img">
-          <img src="fino.jpeg" alt="Anggota 2" />
-        </div>
-        <div class="card-info">
-          <h3>Fino Dwi Pratama</h3>
-          <p>Absen: 07</p>
-        </div>
-      </a>
+.section-container {
+    padding: 80px 0; /* Memberi ruang napas di atas dan bawah setiap bagian */
+}
 
-      <a href="jaya.jpeg" class="kelompok-card">
-        <div class="card-img">
-          <img src="jaya.jpeg" alt="Anggota 3" />
-        </div>
-        <div class="card-info">
-          <h3>Jaya Tri Yanto</h3>
-          <p>Absen: 12</p>
-        </div>
-      </a>
+.bg-light {
+    background-color: #f5efe6; /* Warna Cream sedikit lebih gelap untuk variasi */
+}
 
-      <a href="juli.jpeg" class="kelompok-card">
-        <div class="card-img">
-          <img src="juli.jpeg" alt="Anggota 3" />
-        </div>
-        <div class="card-info">
-          <h3>Julianti Tri Mulyoningrum</h3>
-          <p>Absen: 13</p>
-        </div>
-      </a>
+.bg-white {
+    background-color: #ffffff;
+}
 
-      <a href="niken.jpeg" class="kelompok-card">
-        <div class="card-img">
-          <img src="niken.jpeg" alt="Anggota 3" />
-        </div>
-        <div class="card-info">
-          <h3>Niken Tri Wulandari</h3>
-          <p>Absen: 23</p>
-        </div>
-      </a>
+/* Pengaturan judul setiap bagian */
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #8d6e63; /* Coklat Medium */
+    margin-bottom: 40px;
+    font-weight: 600;
+}
 
-      <a href="zena.jpeg" class="kelompok-card">
-        <div class="card-img">
-          <img src="zena.jpeg" alt="Anggota 3" />
-        </div>
-        <div class="card-info">
-          <h3>Zheina Ajwa Azzahra</h3>
-          <p>Absen: 29</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-<!-- Bagian Makalah -->
-<section id="laporan" class="section-container bg-white">
-  <div class="container">
-    <h2 class="section-title">Makalah Sejarah dan PKN</h2>
-    <div class="content-wrapper">
-      
-      <div class="pdf-container">
-        <iframe
-          src="https://drive.google.com/file/d/1EBCURSK09i1r_AGcxn1OF-Yr0UbahX10/preview"
-          width="100%"
-          height="100%"
-          allow="autoplay">
-        </iframe>
-      </div>
-      <div class="content-desc">
-        <p>Silakan baca dokumen di atas untuk informasi lebih mendalam.</p>
-        <a
-          href="https://drive.google.com/file/d/ID_DRIVE/view?usp=sharing"
-          target="_blank"
-          class="btn-cek"
-          style="margin-top: 15px; padding: 8px 20px; font-size: 0.9rem">
-          Lihat / Unduh PDF
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+/* =========================================
+   2. NAVIGASI (HEADER)
+   ========================================= */
+header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Bayangan halus */
+    position: sticky; /* Tetap di atas saat di-scroll */
+    top: 0;
+    z-index: 1000;
+}
 
-<!-- Bagian Dokumentasi -->
-<section id="video" class="section-container bg-light">
-  <div class="container">
-    <h2 class="section-title">Dokumentasi Video</h2>
-    <div class="video-wrapper">
-      
-      <div class="video-container">
-        <iframe
-        src="https://drive.google.com/file/d/1PKcZpR6JDPFiQy3OC7IyFrJpeO_m9HQ7/preview"
-          width="100%"
-          height="100%"
-          allow="autoplay">
-        </iframe>
-      </div>
+nav {
+    display: flex;
+    justify-content: space-between; /* Logo di kiri, Menu di kanan */
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
 
-      <div class="video-desc">
-        <p align="center">Dokumentasi proyek Kelompok 3.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Bagian Footer -->
-<footer>
-  <p>© 2026 AdeveloperProject - Kelompok 3</p>
-</footer>
-</body>
-</html>
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6d4c41;
+}
+
+.logo span {
+    color: #d7ccc8; /* Warna Coklat sangat muda untuk variasi logo */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none; /* Menghilangkan titik list */
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #5d4037;
+    font-weight: 400;
+    transition: 0.3s; /* Animasi halus saat hover */
+}
+
+.nav-links li a:hover {
+    color: #a1887f; /* Berubah warna saat kursor menempel */
+}
+
+/* =========================================
+   3. HERO SECTION (BERANDA)
+   ========================================= */
+.hero-kelompok {
+    height: 80vh; /* Tinggi 80% layar */
+    background: linear-gradient(rgba(93, 64, 55, 0.7), rgba(215, 204, 200, 0.4)), 
+                url('img/hero-bg.jpg') center/cover; /* Layer warna coklat transparan di atas gambar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-overlay p {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.hero-overlay h1 {
+    font-size: 3.5rem;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.btn-cek {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: #8d6e63;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px; /* Sedikit kotak agar terlihat profesional */
+    transition: 0.4s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-cek:hover {
+    background-color: #5d4037;
+    transform: translateY(-3px); /* Tombol naik sedikit saat hover */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* =========================================
+   4. KELOMPOK GRID (ANGGOTA)
+   ========================================= */
+.kelompok-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsif: minimal 280px per kartu */
+    gap: 30px; /* Jarak antar kartu */
+}
+
+.kelompok-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden; /* Memastikan gambar tidak keluar dari radius */
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    border: 1px solid #efebe9;
+}
+
+.kelompok-card:hover {
+    transform: scale(1.03); /* Membesar halus saat hover */
+    border-color: #d7ccc8;
+}
+
+.card-img img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover; /* Gambar dipotong rapi secara otomatis */
+}
+
+.card-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-info h3 {
+    font-size: 1.1rem;
+    color: #5d4037;
+    margin-bottom: 5px;
+}
+
+.card-info p {
+    color: #a1887f;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   5. LAPORAN & VIDEO (IFRAME)
+   ========================================= */
+.content-wrapper, .video-wrapper {
+    max-width: 800px;
+    margin: auto;
+}
+
+.pdf-container, .video-container {
+    background: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid #d7ccc8;
+    margin-bottom: 30px;
+}
+
+iframe {
+    border-radius: 10px;
+    border: none;
+}
+
+.content-desc, .video-desc {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* =========================================
+   6. FOOTER
+   ========================================= */
+footer {
+    background-color: #5d4037;
+    color: #f5efe6;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+/* =========================================
+   7. RESPONSIVE (UNTUK LAYAR HP)
+   ========================================= */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Menyembunyikan menu di HP (bisa ditambah tombol menu nanti) */
+    }
+    .hero-overlay h1 {
+        font-size: 2.5rem;
+    }
+}
